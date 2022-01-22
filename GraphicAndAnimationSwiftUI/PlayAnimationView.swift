@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct PlayAnimationView: View {
+    @State private var showButton = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            ButtonStart(
+                showButton: $showButton,
+                buttonName: showButton ? "Out" : "Start"
+            )
+        }
+
     }
+
+    
 }
 
 struct PlayAnimationView_Previews: PreviewProvider {

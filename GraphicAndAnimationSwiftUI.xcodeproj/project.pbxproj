@@ -13,6 +13,7 @@
 		8E056E22279B1DDC00A2EB4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E056E21279B1DDC00A2EB4B /* Preview Assets.xcassets */; };
 		8E056E29279B1E1300A2EB4B /* PlayAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E056E28279B1E1300A2EB4B /* PlayAnimationView.swift */; };
 		8E056E2B279B1E3800A2EB4B /* ItemGraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E056E2A279B1E3800A2EB4B /* ItemGraphicView.swift */; };
+		8EF3D662279C4328006E0C92 /* ButtonStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3D661279C4328006E0C92 /* ButtonStart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		8E056E21279B1DDC00A2EB4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E056E28279B1E1300A2EB4B /* PlayAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAnimationView.swift; sourceTree = "<group>"; };
 		8E056E2A279B1E3800A2EB4B /* ItemGraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGraphicView.swift; sourceTree = "<group>"; };
+		8EF3D661279C4328006E0C92 /* ButtonStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				8E056E1A279B1DDB00A2EB4B /* GraphicAndAnimationSwiftUIApp.swift */,
 				8E056E1C279B1DDB00A2EB4B /* ContentView.swift */,
 				8E056E28279B1E1300A2EB4B /* PlayAnimationView.swift */,
+				8EF3D661279C4328006E0C92 /* ButtonStart.swift */,
 				8E056E2A279B1E3800A2EB4B /* ItemGraphicView.swift */,
 				8E056E1E279B1DDC00A2EB4B /* Assets.xcassets */,
 				8E056E20279B1DDC00A2EB4B /* Preview Content */,
@@ -145,6 +148,7 @@
 			files = (
 				8E056E2B279B1E3800A2EB4B /* ItemGraphicView.swift in Sources */,
 				8E056E29279B1E1300A2EB4B /* PlayAnimationView.swift in Sources */,
+				8EF3D662279C4328006E0C92 /* ButtonStart.swift in Sources */,
 				8E056E1D279B1DDB00A2EB4B /* ContentView.swift in Sources */,
 				8E056E1B279B1DDB00A2EB4B /* GraphicAndAnimationSwiftUIApp.swift in Sources */,
 			);

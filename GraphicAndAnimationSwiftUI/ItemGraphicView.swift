@@ -9,16 +9,7 @@ import SwiftUI
 
 struct ItemGraphicView: View {
     var body: some View {
-        TabView {
-            PlayAnimationView()
-                .tabItem {
-                    Image(systemName: "play.circle")
-                }
-            ItemGraphicView()
-                .tabItem {
-                    Image(systemName: "photo")
-                }
-        }
+        Text("test")
     }
 }
 
