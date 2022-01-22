@@ -14,6 +14,8 @@
 		8E056E29279B1E1300A2EB4B /* PlayAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E056E28279B1E1300A2EB4B /* PlayAnimationView.swift */; };
 		8E056E2B279B1E3800A2EB4B /* ItemGraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E056E2A279B1E3800A2EB4B /* ItemGraphicView.swift */; };
 		8EF3D662279C4328006E0C92 /* ButtonStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3D661279C4328006E0C92 /* ButtonStart.swift */; };
+		8EF3D664279C5A56006E0C92 /* ButtonControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3D663279C5A56006E0C92 /* ButtonControl.swift */; };
+		8EF3D666279C6100006E0C92 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3D665279C6100006E0C92 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		8E056E28279B1E1300A2EB4B /* PlayAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAnimationView.swift; sourceTree = "<group>"; };
 		8E056E2A279B1E3800A2EB4B /* ItemGraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGraphicView.swift; sourceTree = "<group>"; };
 		8EF3D661279C4328006E0C92 /* ButtonStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStart.swift; sourceTree = "<group>"; };
+		8EF3D663279C5A56006E0C92 /* ButtonControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonControl.swift; sourceTree = "<group>"; };
+		8EF3D665279C6100006E0C92 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				8E056E1A279B1DDB00A2EB4B /* GraphicAndAnimationSwiftUIApp.swift */,
 				8E056E1C279B1DDB00A2EB4B /* ContentView.swift */,
 				8E056E28279B1E1300A2EB4B /* PlayAnimationView.swift */,
+				8EF3D665279C6100006E0C92 /* GameView.swift */,
+				8EF3D663279C5A56006E0C92 /* ButtonControl.swift */,
 				8EF3D661279C4328006E0C92 /* ButtonStart.swift */,
 				8E056E2A279B1E3800A2EB4B /* ItemGraphicView.swift */,
 				8E056E1E279B1DDC00A2EB4B /* Assets.xcassets */,
@@ -147,10 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E056E2B279B1E3800A2EB4B /* ItemGraphicView.swift in Sources */,
+				8EF3D664279C5A56006E0C92 /* ButtonControl.swift in Sources */,
 				8E056E29279B1E1300A2EB4B /* PlayAnimationView.swift in Sources */,
 				8EF3D662279C4328006E0C92 /* ButtonStart.swift in Sources */,
 				8E056E1D279B1DDB00A2EB4B /* ContentView.swift in Sources */,
 				8E056E1B279B1DDB00A2EB4B /* GraphicAndAnimationSwiftUIApp.swift in Sources */,
+				8EF3D666279C6100006E0C92 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

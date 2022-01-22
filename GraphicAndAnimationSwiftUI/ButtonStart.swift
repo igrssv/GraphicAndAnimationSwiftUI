@@ -22,7 +22,7 @@ struct ButtonStart: View {
         }
         .offset(
             x: showButton ? UIScreen.main.bounds.width * 0.35 : 0,
-            y: showButton ? UIScreen.main.bounds.height * -0.43 :
+            y: showButton ? UIScreen.main.bounds.height * -0.42 :
                 UIScreen.main.bounds.height * 0.3
         )
         .animation(showButton ? .easeIn : .easeOut)
