@@ -8,58 +8,52 @@
 import SwiftUI
 
 struct GameView: View {
-    @State private var witdthPosicion = CGFloat.random(
-        in: 50...UIScreen.main.bounds.width - 50
-    )
-    @State private var heightPosicion = CGFloat(
-        UIScreen.main.bounds.height * 0.6
-    )
+    @State private var posicion = [
+        CGFloat.random(in: 50...UIScreen.main.bounds.width - 50),
+        CGFloat(UIScreen.main.bounds.height * 0.6)
+    ]
     
-    @State private var npsWitdthPosicion = CGFloat.random(
-        in: 50...UIScreen.main.bounds.width - 50
-    )
-    @State private var npsHeightPosicion = CGFloat.random(
-        in: 20...UIScreen.main.bounds.height * 0.58
-    )
+    @State private var enemyPosicion = [
+        CGFloat.random(in: 50...UIScreen.main.bounds.width - 50),
+        CGFloat.random(in: 20...UIScreen.main.bounds.height * 0.58)
+    ]
     
     @State private var contactShow = false
+    @State private var typeButton = false
+    @State private var digressPosicion = 0.0
     
     var body: some View {
         ZStack {
             GeometryReader { geometry in
-                Circle()
+                PackmanPage(mirrorPosicion: $typeButton)
                     .frame(width: 30, height: 30)
                     .foregroundColor(.orange)
+                    .rotationEffect(.degrees(digressPosicion))
+                    
+                    
                     .offset(
-                        x: witdthPosicion,
-                        y: heightPosicion
+                        x: posicion.first ?? 0,
+                        y: posicion.last ?? 0
                     )
+                    
                 
                 Rectangle()
                     .frame(width: 30, height: 30)
                     .foregroundColor(.red)
                     .offset(
-                        x: contactShow ? 0 : npsWitdthPosicion,
-                        y: contactShow ? 0 : npsHeightPosicion
+                        x: contactShow ? -50 : enemyPosicion.first ?? 0,
+                        y: contactShow ? -10 : enemyPosicion.last ?? 0
                     )
-                    
-                    
-                
             }
             .animation(.default)
             
-            VStack {
-                ButtonControl(posicion: $heightPosicion, enemyWidthPosicition: $npsWitdthPosicion, enemyHeightPosicin: $npsHeightPosicion, typeButton: true, nameButton: "↑", contactShow: $contactShow)
- 
-                
-                HStack {
-                    ButtonControl(posicion: $witdthPosicion, enemyWidthPosicition: $npsWitdthPosicion, enemyHeightPosicin: $npsHeightPosicion, typeButton: true, nameButton: "←", contactShow: $contactShow)
-                    ButtonControl(posicion: $witdthPosicion, enemyWidthPosicition: $npsWitdthPosicion, enemyHeightPosicin: $npsHeightPosicion, typeButton: false, nameButton: "→", contactShow: $contactShow)
-                }
-
-                ButtonControl(posicion: $heightPosicion, enemyWidthPosicition: $npsWitdthPosicion, enemyHeightPosicin: $npsHeightPosicion, typeButton: false, nameButton: "↓", contactShow: $contactShow)
-            }
-
+            ButtonsControl(
+                posicion: $posicion,
+                enemyPosicion: $enemyPosicion,
+                contactShow: $contactShow,
+                typeButton: $typeButton,
+                digressPosicion: $digressPosicion
+            )
         }
         
     }
@@ -70,3 +64,5 @@ struct GameView_Previews: PreviewProvider {
         GameView()
     }
 }
+
+

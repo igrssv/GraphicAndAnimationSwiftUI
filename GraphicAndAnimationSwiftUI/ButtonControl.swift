@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ButtonControl: View {
+    @Binding var pos: [CGFloat]
     @Binding var posicion: CGFloat
-    @Binding var enemyWidthPosicition: CGFloat
-    @Binding var enemyHeightPosicin: CGFloat
-    let typeButton: Bool
-    let nameButton: String
+    @Binding var enemyPosicion: [CGFloat]
     @Binding var contactShow: Bool
+    @Binding var typeButton: Bool
+    @Binding var digressPosition: Double
+    let nameButton: String
     
     var body: some View {
             Button(action: posicionListener) {
@@ -27,36 +28,75 @@ struct ButtonControl: View {
                 x: 0,
                 y: UIScreen.main.bounds.height * 0.3
             )
+            
     }
     
     private func posicionListener() {
-        if typeButton {
+        switch nameButton {
+        case "↑":
             posicion -= 30
-        } else {
+            digressPosition = 90
+            typeButton = false
+            contiguousListener()
+        case "←":
+            posicion -= 30
+            digressPosition = 0
+            typeButton = false
+            contiguousListener()
+        case "→":
             posicion += 30
+            digressPosition = 0
+            typeButton = true
+            contiguousListener()
+        default:
+            posicion += 30
+            digressPosition = 280
+            typeButton = false
+            contiguousListener()
         }
+        
         contiguousListener()
     }
     
     private func contiguousListener() {
-        let posicionOne = posicion - 1
-        let posicionTwo = posicion + 1
+        let lowPosicion = pos.map{$0 - 20}
+        let maxPosicion = pos.map{$0 + 20}
+        let enPos = enemyPosicion.first ?? 0
+        let enPostwo = enemyPosicion.last ?? 0
         
-        switch enemyHeightPosicin {
-            case posicionOne...posicionTwo:
-                contactShow.toggle()
-            
-        default:
-            break
+        switch (enPos,enPostwo){
+            case (
+                lowPosicion[0]...maxPosicion[0],
+                lowPosicion[1]...maxPosicion[1]):
+                    contactShow.toggle()
+                    newEnemyPoscicon()
+            default:
+                break
         }
-        
-        
+    }
+    
+    private func newEnemyPoscicon() {
+        enemyPosicion = [
+            CGFloat.random(in: 50...UIScreen.main.bounds.width - 50),
+            CGFloat.random(in: 20...UIScreen.main.bounds.height * 0.58)
+            ]
+
+        contactShow.toggle()
         
     }
 }
 
 struct ButtonControl_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonControl(posicion: .constant(10), enemyWidthPosicition: .constant(20), enemyHeightPosicin: .constant(20), typeButton: true, nameButton: "back", contactShow: .constant(false))
+        ButtonControl(
+            pos:.constant([CGFloat(1)]),
+            posicion: .constant(10),
+            enemyPosicion: .constant([CGFloat(1)]),
+            contactShow: .constant(false),
+            typeButton: .constant(false),
+            digressPosition: .constant(0.0),
+            nameButton: "back"
+            
+        )
     }
 }
