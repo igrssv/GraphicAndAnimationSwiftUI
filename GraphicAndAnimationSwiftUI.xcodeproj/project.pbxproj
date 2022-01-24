@@ -15,6 +15,7 @@
 		8E056E2B279B1E3800A2EB4B /* ItemGraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E056E2A279B1E3800A2EB4B /* ItemGraphicView.swift */; };
 		8E79B17D279DC57800341AF5 /* ButtonsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79B17C279DC57800341AF5 /* ButtonsControl.swift */; };
 		8E79B17F279DC64C00341AF5 /* PackmanPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79B17E279DC64C00341AF5 /* PackmanPage.swift */; };
+		8EDB3032279E943400ED0776 /* EnemyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB3031279E943400ED0776 /* EnemyPage.swift */; };
 		8EF3D662279C4328006E0C92 /* ButtonStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3D661279C4328006E0C92 /* ButtonStart.swift */; };
 		8EF3D664279C5A56006E0C92 /* ButtonControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3D663279C5A56006E0C92 /* ButtonControl.swift */; };
 		8EF3D666279C6100006E0C92 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3D665279C6100006E0C92 /* GameView.swift */; };
@@ -30,6 +31,7 @@
 		8E056E2A279B1E3800A2EB4B /* ItemGraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGraphicView.swift; sourceTree = "<group>"; };
 		8E79B17C279DC57800341AF5 /* ButtonsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsControl.swift; sourceTree = "<group>"; };
 		8E79B17E279DC64C00341AF5 /* PackmanPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackmanPage.swift; sourceTree = "<group>"; };
+		8EDB3031279E943400ED0776 /* EnemyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyPage.swift; sourceTree = "<group>"; };
 		8EF3D661279C4328006E0C92 /* ButtonStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStart.swift; sourceTree = "<group>"; };
 		8EF3D663279C5A56006E0C92 /* ButtonControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonControl.swift; sourceTree = "<group>"; };
 		8EF3D665279C6100006E0C92 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		8E056E0E279B1DDB00A2EB4B = {
 			isa = PBXGroup;
 			children = (
+				8EDB3031279E943400ED0776 /* EnemyPage.swift */,
 				8E056E19279B1DDB00A2EB4B /* GraphicAndAnimationSwiftUI */,
 				8E056E18279B1DDB00A2EB4B /* Products */,
 			);
@@ -163,6 +166,7 @@
 				8E056E29279B1E1300A2EB4B /* PlayAnimationView.swift in Sources */,
 				8EF3D662279C4328006E0C92 /* ButtonStart.swift in Sources */,
 				8E056E1D279B1DDB00A2EB4B /* ContentView.swift in Sources */,
+				8EDB3032279E943400ED0776 /* EnemyPage.swift in Sources */,
 				8E056E1B279B1DDB00A2EB4B /* GraphicAndAnimationSwiftUIApp.swift in Sources */,
 				8E79B17F279DC64C00341AF5 /* PackmanPage.swift in Sources */,
 				8EF3D666279C6100006E0C92 /* GameView.swift in Sources */,

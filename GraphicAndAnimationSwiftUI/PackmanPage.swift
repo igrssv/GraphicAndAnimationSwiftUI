@@ -22,6 +22,7 @@ struct PackmanPage: View {
                     .foregroundColor(.yellow)
                 Circle()
                     .stroke(.black, lineWidth: 4)
+                    .shadow(color: .black, radius: 2)
                 Circle()
                     .frame(width: optimalSize * 0.15, height: optimalSize * 0.15)
                     .offset(
@@ -29,6 +30,7 @@ struct PackmanPage: View {
                         y: optimalSize * (mirrorPosicion ? -0.2 : -0.2)
                     )
                     .foregroundColor(.black)
+                    .shadow(color: .black, radius: 4)
                 
                 Path { patch in
                     patch.move(to: CGPoint(

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ButtonControl: View {
-    @Binding var pos: [CGFloat]
+    @Binding var posicionPerosnage: [CGFloat]
     @Binding var posicion: CGFloat
     @Binding var enemyPosicion: [CGFloat]
     @Binding var contactShow: Bool
@@ -59,8 +59,8 @@ struct ButtonControl: View {
     }
     
     private func contiguousListener() {
-        let lowPosicion = pos.map{$0 - 20}
-        let maxPosicion = pos.map{$0 + 20}
+        let lowPosicion = posicionPerosnage.map{$0 - 20}
+        let maxPosicion = posicionPerosnage.map{$0 + 20}
         let enPos = enemyPosicion.first ?? 0
         let enPostwo = enemyPosicion.last ?? 0
         
@@ -89,7 +89,7 @@ struct ButtonControl: View {
 struct ButtonControl_Previews: PreviewProvider {
     static var previews: some View {
         ButtonControl(
-            pos:.constant([CGFloat(1)]),
+            posicionPerosnage:.constant([CGFloat(1)]),
             posicion: .constant(10),
             enemyPosicion: .constant([CGFloat(1)]),
             contactShow: .constant(false),

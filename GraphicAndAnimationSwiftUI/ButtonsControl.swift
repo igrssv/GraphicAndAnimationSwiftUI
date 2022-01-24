@@ -17,7 +17,7 @@ struct ButtonsControl: View {
     var body: some View {
         VStack {
             ButtonControl(
-                pos: $posicion,
+                posicionPerosnage: $posicion,
                 posicion: $posicion[1],
                 enemyPosicion: $enemyPosicion,
                 contactShow: $contactShow,
@@ -28,7 +28,7 @@ struct ButtonsControl: View {
             
             HStack {
                 ButtonControl(
-                    pos: $posicion,
+                    posicionPerosnage: $posicion,
                     posicion: $posicion[0],
                     enemyPosicion: $enemyPosicion,
                     contactShow: $contactShow,
@@ -37,7 +37,7 @@ struct ButtonsControl: View {
                     nameButton: "←"
                 )
                 ButtonControl(
-                    pos: $posicion,
+                    posicionPerosnage: $posicion,
                     posicion: $posicion[0],
                     enemyPosicion: $enemyPosicion,
                     contactShow: $contactShow,
@@ -48,7 +48,7 @@ struct ButtonsControl: View {
             }
             
             ButtonControl(
-                pos: $posicion,
+                posicionPerosnage: $posicion,
                 posicion: $posicion[1],
                 enemyPosicion: $enemyPosicion,
                 contactShow: $contactShow,

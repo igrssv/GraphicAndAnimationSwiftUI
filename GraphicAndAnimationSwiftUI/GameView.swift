@@ -12,12 +12,10 @@ struct GameView: View {
         CGFloat.random(in: 50...UIScreen.main.bounds.width - 50),
         CGFloat(UIScreen.main.bounds.height * 0.6)
     ]
-    
     @State private var enemyPosicion = [
         CGFloat.random(in: 50...UIScreen.main.bounds.width - 50),
         CGFloat.random(in: 20...UIScreen.main.bounds.height * 0.58)
     ]
-    
     @State private var contactShow = false
     @State private var typeButton = false
     @State private var digressPosicion = 0.0
@@ -29,17 +27,13 @@ struct GameView: View {
                     .frame(width: 30, height: 30)
                     .foregroundColor(.orange)
                     .rotationEffect(.degrees(digressPosicion))
-                    
-                    
                     .offset(
                         x: posicion.first ?? 0,
                         y: posicion.last ?? 0
                     )
                     
-                
-                Rectangle()
+                EnemyPage()
                     .frame(width: 30, height: 30)
-                    .foregroundColor(.red)
                     .offset(
                         x: contactShow ? -50 : enemyPosicion.first ?? 0,
                         y: contactShow ? -10 : enemyPosicion.last ?? 0
@@ -54,6 +48,7 @@ struct GameView: View {
                 typeButton: $typeButton,
                 digressPosicion: $digressPosicion
             )
+            
         }
         
     }
